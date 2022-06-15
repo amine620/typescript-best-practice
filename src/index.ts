@@ -1,3 +1,8 @@
-type Quentity=50|100
-
-let quetity:Quentity=100
+function greet(name:string|null){
+    if(name)
+      console.log(name.toLowerCase());
+    else
+       console.log('hi');
+       
+}
+greet(null)

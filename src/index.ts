@@ -1,7 +1,17 @@
-function calculate(income:number,tax:number):number{
-   if(income <5000 && tax==0)
-    return income*1.2
-   return income*1.3
+interface Employee{
+    id:number,
+    name:string,
+    retire:(date:Date)=>void
 }
 
-calculate(11,1)
+
+
+let meployee:Employee={
+    id:1,
+    name:"amine",
+    retire:(date:Date)=>{
+        console.log(date);
+        
+    }
+    
+}

@@ -1,3 +1,8 @@
-let phone=<HTMLInputElement>document.getElementById("phone")
+function processEevent():never{
+   while(true){
 
-phone.value
+   }
+}
+
+processEevent()
+console.log('hi');

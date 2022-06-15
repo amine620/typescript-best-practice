@@ -1,7 +1,7 @@
 class Account{
-    readonly id:number;
-    owner:string;
-    balance : number;
+    private id:number;
+    private owner:string;
+    private balance : number;
 
     constructor(id:number,owner:string,balance:number){
         this.id=id
@@ -15,8 +15,11 @@ class Account{
        }
        this.balance+=amount
     }
+    getBalance():number{
+        return this.balance
+    }
 }
 
 let account=new Account(1,'amine',20)
 
-account.id=10
+ account.getBalance()

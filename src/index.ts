@@ -1,8 +1,16 @@
-function processEevent():never{
-   while(true){
-
-   }
+type bird={
+    fly:()=>void
 }
 
-processEevent()
-console.log('hi');
+type fish={
+    swim:()=>void
+}
+
+type Pet=bird | fish
+
+
+type Days="Monday"|"Tuesday"
+
+let user = getUser();
+console.log(user?.address?.street);
+

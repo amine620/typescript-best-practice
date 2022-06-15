@@ -1,30 +1,36 @@
 "use strict";
 class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    walk() {
-        console.log('walking');
+    constructor(fname, lname) {
+        this.fname = fname;
+        this.lname = lname;
     }
     get fullName() {
-        return this.name + " " + this.name;
+        return this.fname + " " + this.lname;
     }
 }
 class Student extends Person {
-    constructor(studentId, name, age) {
-        super(name, age);
-        this.studentId = studentId;
+    constructor(fname, lname) {
+        super(fname, lname);
     }
-    taketest() {
-        console.log("taking test");
-    }
-}
-let student = new Student(111, "amine", 25);
-class Teacher extends Person {
     get fullName() {
-        return "Teacher " + super.name;
+        return "Student " + super.fullName;
     }
 }
-let teacher = new Teacher('amine', 25);
+class Teacher extends Person {
+    constructor(fname, lname) {
+        super(fname, lname);
+    }
+    get fullName() {
+        return "Teacher " + super.fullName;
+    }
+}
+printNames([
+    new Student("amine", "mourid"),
+    new Teacher("salim", "mourid"),
+]);
+function printNames(people) {
+    for (let person of people) {
+        console.log(person.fullName);
+    }
+}
 //# sourceMappingURL=index.js.map

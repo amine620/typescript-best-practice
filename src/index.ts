@@ -1,33 +1,37 @@
 class Person{
-   constructor(public fname:string,public age:number){}
-   walk(){
-    console.log('walking');
-    
-   }
+   constructor(public fname:string,public lname:string){}
    get fullName(){
-     return this.fname+" "+this.age
+     return this.fname+" "+this.lname
    }
 }
 
-// class Student extends Person{
-//     constructor(public studentId:number,fname:string,age:number){
-
-//         super(fname,age)
-//     }
-//     taketest(){
-//         console.log("taking test");
-        
-//     }
-// }
-
-// let student=new Student(111,"amine",25)
+class Student extends Person{
+    constructor(fname:string,lname:string){
+        super(fname,lname)
+    }
+    override get fullName():string {
+        return "Student "+super.fullName
+    }
+}
 
 class Teacher extends Person{
-   override get fullName(){
-    return "Teacher "+super.fname
-  }
+    constructor(fname:string,lname:string){
+        super(fname,lname)
+    }
+
+    override get fullName():string {
+        return "Teacher "+super.fullName
+    }
 }
 
-let teacher=new Teacher('amine',25)
+printNames([
+    new Student("john","doe"),
+    new Teacher("amine","mourid"),
+])
 
-console.log(teacher.fullName);
+function printNames(people:Person[]) {
+    for (let person of people) {
+        console.log(person.fullName);
+        
+    }
+}

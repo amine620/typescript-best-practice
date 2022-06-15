@@ -1,5 +1,5 @@
 class Account{
-    id:number;
+    readonly id:number;
     owner:string;
     balance : number;
 
@@ -19,4 +19,4 @@ class Account{
 
 let account=new Account(1,'amine',20)
 
-account.diposit(100)
+account.id=10

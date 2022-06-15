@@ -12,4 +12,6 @@ class Account {
         this.balance += amount;
     }
 }
+let account = new Account(1, 'amine', 20);
+account.id;
 //# sourceMappingURL=index.js.map

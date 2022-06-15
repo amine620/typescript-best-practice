@@ -2,6 +2,10 @@ class Person{
    constructor(public name:string,public age:number){
 
    }
+   walk(){
+    console.log('walking');
+    
+   }
 }
 
 class Student extends Person{
@@ -14,3 +18,5 @@ class Student extends Person{
         
     }
 }
+
+let student=new Student(111,"amine",25)

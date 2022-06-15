@@ -1,7 +1,13 @@
-class setAssignment{
-    [seatNumber:string]:string
-}
-let seat=new setAssignment()
+class Ride{
+    static activeRides:number=0
 
-seat.A1="amine"
-seat.A2="mourid"
+    start(){
+        Ride.activeRides++
+    }
+    stop(){
+        Ride.activeRides--
+    }
+}
+
+let ride=new Ride()
+ride.start()

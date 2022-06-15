@@ -1,11 +1,15 @@
 class Ride{
-    static activeRides:number=0
+   private static _activeRides:number=0
 
     start(){
-        Ride.activeRides++
+        Ride._activeRides++
     }
     stop(){
-        Ride.activeRides--
+        Ride._activeRides--
+    }
+
+   static get activeRides(){
+          return Ride._activeRides
     }
 }
 

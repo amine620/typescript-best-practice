@@ -1,17 +1,16 @@
-class Ride{
-   private static _activeRides:number=0
+class Person{
+   constructor(public name:string,public age:number){
 
-    start(){
-        Ride._activeRides++
-    }
-    stop(){
-        Ride._activeRides--
-    }
-
-   static get activeRides(){
-          return Ride._activeRides
-    }
+   }
 }
 
-let ride=new Ride()
-ride.start()
+class Student extends Person{
+    constructor(public studentId:number,name:string,age:number){
+
+        super(name,age)
+    }
+    taketest(){
+        console.log("taking test");
+        
+    }
+}

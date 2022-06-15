@@ -1,17 +1,17 @@
 "use strict";
-class Account {
-    constructor(id, owner, balance) {
-        this.id = id;
-        this.owner = owner;
-        this.balance = balance;
-    }
-    diposit(amount) {
-        if (amount <= 0) {
-            throw new Error('invalid amount');
-        }
-        this.balance += amount;
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
     }
 }
-let account = new Account(1, 'amine', 20);
-account.id;
+class Student extends Person {
+    constructor(studentId, name, age) {
+        super(name, age);
+        this.studentId = studentId;
+    }
+    taketest() {
+        console.log("taking test");
+    }
+}
 //# sourceMappingURL=index.js.map

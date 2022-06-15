@@ -1,16 +1,18 @@
-type bird={
-    fly:()=>void
+class Account{
+    id:number;
+    owner:string;
+    balance : number;
+
+    constructor(id:number,owner:string,balance:number){
+        this.id=id
+        this.owner=owner
+        this.balance=balance
+    }
+
+    diposit(amount:number):void{
+       if(amount<=0){
+          throw new Error('invalid amount')
+       }
+       this.balance+=amount
+    }
 }
-
-type fish={
-    swim:()=>void
-}
-
-type Pet=bird | fish
-
-
-type Days="Monday"|"Tuesday"
-
-let user = getUser();
-console.log(user?.address?.street);
-

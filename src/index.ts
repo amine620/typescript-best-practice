@@ -1,17 +1,3 @@
-type Draggable={
-   drag:()=>void
-}
-type Resizable={
-    resize:()=>void
-}
+type Quentity=50|100
 
-type UIWidget=Draggable & Resizable
-
-let textbox:UIWidget={
-    drag() {
-        
-    },
-    resize() {
-        
-    },
-}
+let quetity:Quentity=100

@@ -1,17 +1,8 @@
-interface Employee{
-    id:number,
-    name:string,
-    retire:(date:Date)=>void
+function kgToLbs(weight:number|string):number{
+       if(typeof weight =="number")
+       {
+         return weight*1
+       }
+       return parseInt(weight)*4
 }
-
-
-
-let meployee:Employee={
-    id:1,
-    name:"amine",
-    retire:(date:Date)=>{
-        console.log(date);
-        
-    }
-    
-}
+kgToLbs("4")

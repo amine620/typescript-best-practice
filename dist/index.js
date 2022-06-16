@@ -1,10 +1,11 @@
 "use strict";
-function fetch(url) {
-    url;
-    return {
-        data: null,
-        error: null
-    };
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
 }
-let res = fetch("url");
+function echo(value) {
+    return value;
+}
+echo(new Person("amine"));
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,10 @@
 "use strict";
-function getData(value) {
-    return [value];
+function fetch(url) {
+    url;
+    return {
+        data: null,
+        error: null
+    };
 }
-let res = getData("h");
+let res = fetch("url");
 //# sourceMappingURL=index.js.map

@@ -1,5 +1,21 @@
-function getData<T>(value:T){
-   return [value]
+interface result<T>{
+    data:T|null
+    error:string|null
 }
 
-let res=getData("h")
+function fetch<T>(url:string):result<T>{
+    url
+    return {
+        data:null,
+        error:null
+    }
+}
+
+interface User{
+    username:string
+}
+interface Product{
+    title:string
+}
+
+let res=fetch<User>("url")

@@ -1,14 +1,20 @@
-abstract class Shape{
-    constructor(public color:string,){}
-    abstract render():void
+interface Calandar{
+    name:string
+    addEvent():void
+    removeEvent():void
 }
 
-class Circle extends Shape{
-   constructor(public radius:number,color:string){
-         super(color)
-   } 
 
-   override render(): void {
-       
-   }
+
+class GoogleCalandar implements Calandar{
+    constructor(public name:string){
+
+    }
+   
+    addEvent(): void {
+        
+    }
+    removeEvent(): void {
+        
+    }
 }

@@ -1,9 +1,6 @@
 "use strict";
-class KeyValuePair {
-    constructor(key, value) {
-        this.key = key;
-        this.value = value;
-    }
+function getData(value) {
+    return [value];
 }
-let pair = new KeyValuePair('a', 'b');
+let res = getData("h");
 //# sourceMappingURL=index.js.map

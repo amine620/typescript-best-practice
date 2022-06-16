@@ -1,6 +1,5 @@
-class KeyValuePair<K,V>{
-   constructor(public key:K,public value:V){}
+function getData<T>(value:T){
+   return [value]
 }
 
-let pair = new KeyValuePair<string,string>('a','b')
-
+let res=getData("h")

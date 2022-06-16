@@ -1,20 +1,6 @@
-interface Calandar{
-    name:string
-    addEvent():void
-    removeEvent():void
+class KeyValuePair<K,V>{
+   constructor(public key:K,public value:V){}
 }
 
+let pair = new KeyValuePair<string,string>('a','b')
 
-
-class GoogleCalandar implements Calandar{
-    constructor(public name:string){
-
-    }
-   
-    addEvent(): void {
-        
-    }
-    removeEvent(): void {
-        
-    }
-}
